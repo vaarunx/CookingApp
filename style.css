@@ -3,13 +3,13 @@
     padding: 0;
 }
 
-body{
+body {
     background-image: url("junk-food-1.webp");
     /*background-size: auto;
     background-position: center;*/
     font-family: cursive;
 }
-.input{
+.input-signup{
     width: 510px;
     background: rgba(0 , 0 , 0 , 0.8);
     margin: 12% auto;
@@ -64,4 +64,15 @@ button:hover{
     background-color: #c8c9c9;
     text-emphasis-style: bold;
     color: #000000;
+}
+
+
+.input-login{
+    width: 510px;
+    background: rgba(0 , 0 , 0 , 0.8);
+    margin: 12% auto;
+    padding: 50px 0;
+    color: #ffffff;
+    box-shadow: 0 0 20px 2px;
+    height: 250px;
 }
