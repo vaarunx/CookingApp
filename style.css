@@ -10,16 +10,58 @@ body{
     font-family: cursive;
 }
 .input{
-    width: 500px;
+    width: 510px;
     background: rgba(0 , 0 , 0 , 0.8);
     margin: 12% auto;
     padding: 50px 0;
     color: #ffffff;
     box-shadow: 0 0 20px 2px;
-    height: 100px;
+    height: 350px;
 }
 
 h1{
     text-align: center;
-    margin: 5px 50px;
+    margin-bottom: 10px auto;
+}
+
+input{
+    margin: 10px 10px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    width: 90%;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: small;
+    border-bottom: 1px solid #ffffff;
+    align-items: right;
+}
+ 
+::placeholder{
+    color: #cccccc;
+}
+
+.fa {
+    margin-left: 6px ;
+    
+}
+
+button{
+    margin: 20px auto 2px;
+    width: 80%;
+    display: block; 
+    outline: none;
+    padding: 10px 0;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    background: transparent;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+button:hover{
+    background-color: #c8c9c9;
+    text-emphasis-style: bold;
+    color: #000000;
 }
