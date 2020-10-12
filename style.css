@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("junk-food-1.webp");
+    /*background-size: auto;
+    background-position: center;*/
+    font-family: cursive;
+}
+.input{
+    width: 500px;
+    background: rgba(0 , 0 , 0 , 0.8);
+    margin: 12% auto;
+    padding: 50px 0;
+    color: #ffffff;
+    box-shadow: 0 0 20px 2px;
+    height: 100px;
+}
+
+h1{
+    text-align: center;
+    margin: 5px 50px;
+}
