@@ -76,3 +76,8 @@ button:hover{
     box-shadow: 0 0 20px 2px;
     height: 250px;
 }
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}

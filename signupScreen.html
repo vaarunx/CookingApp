@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css"> 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
     </head>
-    <body class = "signup">
+    <body id = "signup">
         <div class = 'input-signup'>   
         <h1> WELCOME!</h1>
             <form action = "" method = 'POST'>
@@ -19,8 +19,14 @@
                 <input id = 'password' placeholder="Enter a password" type = 'password' name = 'password' required>
                 <i class="fa fa-key"></i>
                 <input id = 'password-again' placeholder = "Enter the password again" type = 'password' name = 'password' required>
-                <button type="button" class = 'signup'>SIGN UP!</button>
-                <button type="button" id = 'login-reroute'>GO TO LOGIN PAGE!</button>
+                <button type="button" class = 'signup'>
+                  <a target ='_self' href = "">SIGN UP!</a>
+                </button>
+                <button type="button" id = 'login-reroute'>
+                    <a target="_self" href="loginScreen.html"> 
+                        GO TO LOGIN PAGE!
+                    </a>
+                </button>
             </form>
         </div>
         
