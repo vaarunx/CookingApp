@@ -1,0 +1,15 @@
+{% extends "CookingApp/main.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  {% for recipe in all_recipes %}
+    <div class = "content-section"> {{recipe.name}}</div>
+    {% endfor %}
+
+    <form action = "/recipe/addRecipe/" method="POST">
+        {% csrf_token %}
+        <input type = "text" name = "DishName">
+        <input type = "submit" value = "Add">
+    </form>
+
+{% endblock content %}
