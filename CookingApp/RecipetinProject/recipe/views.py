@@ -19,8 +19,21 @@ def recipes(request):
 @login_required
 def addRecipe(request):
     if request.method == 'POST':
-        new_item = Recipe(name = request.POST['DishName'] , author = User.get_username(self))
+        new_item = Recipe(name = request.POST['DishName'] , cuisine = request.POST['Cuisine'])
         new_item.save()
     
-    return HttpResponseRedirect('/addRecipe/')
+    return HttpResponseRedirect('/recipe/')
+
+@login_required
+def deleteRecipe(request , recipe_id):
+    if request.method == "POST":
+        print(recipe_id)
+        deleteItem = Recipe.objects.get(id = recipe_id)
+        deleteItem.delete()
+    
+    return HttpResponseRedirect('/recipe/')
+
+
+
+
     

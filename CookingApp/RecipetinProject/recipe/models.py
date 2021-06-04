@@ -4,12 +4,20 @@ from django.db.models.deletion import CASCADE
 from django.utils import timezone
 
 
+cuisineChoices = (
+    ("Indian" , "Indian"),
+    ("Chinese" , "Chinese"),
+    ("Italian" , "Italian"),
+    ("American" , "American"),
+    ("Other" , "Other")
+)
+
 # Create your models here.
-class Recipe(models.Model):
+class Recipe(models.Model): 
     name = models.CharField(max_length=100)
     cuisine = models.CharField(max_length=100)
     datePosted = models.DateTimeField(default=timezone.now)
-    author = models.ForeignKey(User , on_delete= models.CASCADE)
+    #author = models.ForeignKey(User , on_delete= models.CASCADE)
 
 
     def __str__(self):

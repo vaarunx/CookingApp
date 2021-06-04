@@ -2,14 +2,48 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-  {% for recipe in all_recipes %}
-    <div class = "content-section"> {{recipe.name}}</div>
-    {% endfor %}
+<div class = "media">
+    <div class = "media-body">
+        <h2 class="account-heading">Your Recipes</h2>
+        {% for recipe in all_recipes %}
+            <div class = "content-section"> 
+                {{recipe.name}}
+                {{recipe.cuisine}}
+                <form action = "/recipe/deleteRecipe/{{recipe.id}}/" method="POST">
+                    {% csrf_token %}
+                    <input type = "submit" value = "Delete" class="btn btn-outline-danger float-right" >
+                </form>
+                <form action = "/recipe/updateRecipe/{{recipe.id}}/" method="POST">
+                    {% csrf_token %}
+                <input type = "submit" value = "Update" class ="btn btn-outline-warning float-right" data-toggle ="modal" data-target = "#RecipeModal">
 
-    <form action = "/recipe/addRecipe/" method="POST">
-        {% csrf_token %}
-        <input type = "text" name = "DishName">
-        <input type = "submit" value = "Add">
-    </form>
+                </form>
+
+            </div>
+            {% endfor %}
+
+            <form action = "/recipe/addRecipe/" method="POST">
+                {% csrf_token %}
+                <input type = "text" name = "DishName">
+                <label for="cuisine">Choose a car:</label>
+
+                <select name="Cuisine" id="cuisine">
+                <option value="Indian">Indian</option>
+                <option value="saab">Chinese</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+                <input type = "submit" class ="btn btn-outline-info" value = "Add">
+            </form>
+    </div>
+</div>
+
+<div class = "modal fade" id = "RecipeModal" role = "dialog">
+    grejhkfdjfd
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+</div>
 
 {% endblock content %}
+
