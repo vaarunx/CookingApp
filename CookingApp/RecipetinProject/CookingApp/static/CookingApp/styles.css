@@ -4,6 +4,10 @@
     background-color: #bd0221;
 }
 
+a{
+  text-decoration: none;
+}
+
 .footer{
     background-color: #D1C4E9;
     margin: 0px auto;

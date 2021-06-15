@@ -1,49 +1,75 @@
 {% extends "CookingApp/main.html" %}
+
 {% load crispy_forms_tags %}
 
 {% block content %}
+
+
 <div class = "media">
     <div class = "media-body">
         <h2 class="account-heading">Your Recipes</h2>
+        <a class = "btn btn-info  mt-1 mb-1 " href = "{% url 'recipe-create' %}"> Create a new Recipe </a>
         {% for recipe in all_recipes %}
             <div class = "content-section"> 
-                {{recipe.name}}
-                {{recipe.cuisine}}
-                <form action = "/recipe/deleteRecipe/{{recipe.id}}/" method="POST">
-                    {% csrf_token %}
-                    <input type = "submit" value = "Delete" class="btn btn-outline-danger float-right" >
-                </form>
-                <form action = "/recipe/updateRecipe/{{recipe.id}}/" method="POST">
-                    {% csrf_token %}
-                <input type = "submit" value = "Update" class ="btn btn-outline-warning float-right" data-toggle ="modal" data-target = "#RecipeModal">
-
-                </form>
+                <div class="article-metadata row">
+                    <h2><a class="article-title" href="{%url 'recipe-detail' recipe.id %}">{{ recipe.name}}</a></h2>
+                    <small class="text-muted col-sm">{{ recipe.datePosted }}</small>
+                </div>
+                <b>Cuisine :</b> {{recipe.cuisine}}
+                <p class="article-content"><b>Ingredients:</b> {{recipe.ingredients}}</p>
+                
+               <b>Steps:</b> {{recipe.steps}}
 
             </div>
             {% endfor %}
 
+            
+<!--
             <form action = "/recipe/addRecipe/" method="POST">
                 {% csrf_token %}
-                <input type = "text" name = "DishName">
-                <label for="cuisine">Choose a car:</label>
+                <table>
+                    <tr>
+                        <div class="col-md">
+                        <tr>
+                            <div class="form-floating">
+                                <td><input type="text" class="form-control" id="DishName" name = "DishName" placeholder="Name of the Dish"> </td>
+                               <td> <label for="DishName">Name</label> </td>
+                            </div>
+                        </tr>
+                        </div>
+                        <div class="col-md">
+                        <div class="form-floating">
+                            <select class="form-select" id="cuisine" name = "Cuisine">
+                                <option selected>-</option>
+                                <option value="Indian">Indian</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="Italian">Italian</option>
+                                <option value="Mexican">Mexican</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <label for="cuisine">Cuisine</label>
+                        </div>
+                        </div>
+                    </div>
 
-                <select name="Cuisine" id="cuisine">
-                <option value="Indian">Indian</option>
-                <option value="saab">Chinese</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
-                <input type = "submit" class ="btn btn-outline-info" value = "Add">
+                    <tr>
+                        <div class="input-group mb-3">
+                        <td class = "IngredientClass">  <input type="text" class="form-control" id ="addNewIngredient" name = "Ingredients" placeholder="Ingredients">
+                            <button class="btn btn-outline-secondary" type="button" id="addNewIngredientButton">Add New</button><br>
+                        </td>
+                        </div>
+                    </tr>    
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id ="addNewStep" name = "Steps" placeholder="Steps">
+                    </div>
+
+                    <input type = "submit" class ="btn btn-outline-info" value = "Add">
+                </table>
             </form>
     </div>
 </div>
 
-<div class = "modal fade" id = "RecipeModal" role = "dialog">
-    grejhkfdjfd
-    <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-</div>
+-->
 
 {% endblock content %}
 

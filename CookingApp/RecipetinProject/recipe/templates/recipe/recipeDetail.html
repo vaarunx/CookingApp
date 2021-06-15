@@ -1,0 +1,22 @@
+{% extends "CookingApp/main.html" %}
+{% block content%}
+    <div class = "media">
+        <div class = "media-body">
+            <h2 class="account-heading">Your Recipes</h2>
+            <div class = "content-section"> 
+                <div class="article-metadata">
+                    <h2><a class="article-title" href="#">{{ recipe.name}}</a></h2>
+                    <small class="text-muted">{{ recipe.datePosted }}</small>
+                </div>
+                {{recipe.cuisine}}
+                <p class="article-content">{{recipe.ingredients}}</p>
+                {{recipe.steps}}
+            </div>
+        </div>
+    </div>
+    <div>
+        <a class = "btn btn-secondary btn-sm mt-1 mb-1 " href = "{% url 'recipe-update' recipe.id %}"> Update </a>
+        <a class = "btn btn-danger btn-sm mt-1 mb-1 " href = "{% url 'recipe-delete' recipe.id %}"> Delete </a>
+      </div>
+
+{% endblock content %}    
