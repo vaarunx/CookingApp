@@ -26,6 +26,28 @@ Screenshots:
 
 5. Listing the Recipes
 
+![Screenshot 2021-06-19 at 8 16 47 PM](https://user-images.githubusercontent.com/50340089/122647134-4fb05380-d140-11eb-8dde-8189a3b13352.png)
+
+
+6. Creating a Recipe
+
+![Screenshot 2021-06-19 at 8 15 47 PM](https://user-images.githubusercontent.com/50340089/122647171-77072080-d140-11eb-81dc-9ffc79063b51.png)
+
+
+7. Update and Delete
+
+![Screenshot 2021-06-19 at 8 55 33 PM](https://user-images.githubusercontent.com/50340089/122647225-c77e7e00-d140-11eb-9a43-b419d0500e39.png)
+
+8. Deleting
+
+![Screenshot 2021-06-19 at 8 55 44 PM](https://user-images.githubusercontent.com/50340089/122647231-d2d1a980-d140-11eb-9347-feec4fc912e9.png)
+
+
+
+
+
+
+
 
 
 
