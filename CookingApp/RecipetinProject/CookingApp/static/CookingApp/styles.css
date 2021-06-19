@@ -115,3 +115,10 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+
+#Recipeimg {
+  display: block;
+  padding-top: 30px;
+  margin-right: auto;
+  width: 50%;
+}

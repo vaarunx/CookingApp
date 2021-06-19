@@ -19,6 +19,11 @@
                 <p class="article-content"><b>Ingredients:</b> {{recipe.ingredients}}</p>
                 
                <b>Steps:</b> {{recipe.steps}}
+               
+               {% if recipe.image %}
+               <div class = "row"> <img class="img-fluid  float-left" id ="Recipeimg" src = "{{recipe.image.url}}" > </div>
+               {% endif %}
+               
 
             </div>
             {% endfor %}

@@ -28,10 +28,11 @@ class RecipeDetailView(DetailView):
 class RecipeCreateList(LoginRequiredMixin, CreateView):
     model = Recipe
     template_name = "recipe/createRecipe.html"
-    fields = ['name' , 'cuisine' , 'ingredients' , 'steps' ]    
+    fields = ['name' , 'cuisine' , 'ingredients' , 'steps' , 'image' ]    
     #success_url = "/"
 
     def form_valid(self, form):
+        print(self.request)
         form.instance.author = self.request.user
         return super().form_valid(form)
 
@@ -39,7 +40,7 @@ class RecipeCreateList(LoginRequiredMixin, CreateView):
 class RecipeUpdateList(LoginRequiredMixin , UserPassesTestMixin , UpdateView):
     model = Recipe
     template_name = "recipe/createRecipe.html"
-    fields = ['name' , 'cuisine' , 'ingredients' , 'steps' ]     
+    fields = ['name' , 'cuisine' , 'ingredients' , 'steps' , 'image' ]     
     success_url = "/"
 
     def form_valid(self, form):
