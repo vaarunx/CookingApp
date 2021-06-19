@@ -5,5 +5,6 @@ The user-created recipes are hidden to every other user but the blog post is vis
 Made on django.
 
 
+![Screenshot 2021-06-19 at 8 23 01 PM](https://user-images.githubusercontent.com/50340089/122646377-74a2c780-d13c-11eb-8557-b5e93d457a9c.png)
 
   
